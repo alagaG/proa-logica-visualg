@@ -17,7 +17,7 @@ Inicio
    Escreva("Insira que horas o jogo terminou: (inteiro) ")
    Leia(hora_fim)
 
-   se (hora_inicio > hora_fim) entao
+   se (hora_inicio => hora_fim) entao
       duracao <- (hora_fim + 24) - hora_inicio
    senao
       duracao <- hora_fim - hora_inicio
