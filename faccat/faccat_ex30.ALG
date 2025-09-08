@@ -1,7 +1,7 @@
-Algoritmo "FACCAT - Ex. 28"
+Algoritmo "FACCAT - Ex. 30"
 // Disciplina  : [Lógica de Programação]
 // Professor   : Jailson Costa dos Santos 
-// Descrição   : Lê 3 números e informa o maior.
+// Descrição   : Lê 3 números e informa a soma dos 2 maiores.
 // Autor(a)    : Matheus de Oliveira Caldas
 // Data atual  : 04/09/2025
 Var
@@ -19,23 +19,23 @@ Inicio
    
    se (numero1 > numero2) entao
       se (numero2 > numero3) entao
-         Escreva(numero1)
+         Escreva(numero3, numero2, numero1)
       senao
          se (numero1 > numero3) entao
-            Escreva(numero1)
+            Escreva(numero2, numero3, numero1)
          senao
-            Escreva(numero3)
+            Escreva(numero2, numero1, numero3)
          fimse
       fimse
    senao
       se (numero1 < numero3) entao
          se (numero3 < numero2) entao
-            Escreva(numero2)
+            Escreva(numero1, numero3, numero2)
          senao
-            Escreva(numero3)
+            Escreva(numero1, numero2, numero3)
          fimse
       senao
-         Escreva(numero2)
+         Escreva(numero3, numero1, numero2)
       fimse
    fimse
 
