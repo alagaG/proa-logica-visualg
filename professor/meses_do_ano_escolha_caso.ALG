@@ -44,7 +44,7 @@ Inicio
    fimescolha
 
    se (mes_do_ano <> "Nenhum") entao
-      Escreva("O mês do ano é ", mes_do_ano
+      Escreva("O mês do ano é ", mes_do_ano)
    senao
       Escreva("O número não representa um mês do ano (1-12)")
    fimse
