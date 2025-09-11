@@ -1,7 +1,7 @@
 Algoritmo "FACCAT - Ex. 30"
 // Disciplina  : [Lógica de Programação]
 // Professor   : Jailson Costa dos Santos 
-// Descrição   : Lê 3 números e informa a soma dos 2 maiores.
+// Descrição   : Lê 3 números e os apresenta em ordem crescente.
 // Autor(a)    : Matheus de Oliveira Caldas
 // Data atual  : 04/09/2025
 Var

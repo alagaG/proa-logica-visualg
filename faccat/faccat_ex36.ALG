@@ -28,21 +28,21 @@ Inicio
    se (idade_MA > idade_MB) entao
       se (idade_FA > idade_FB) entao
          soma := idade_MA + idade_FB
-         produto := idade_MB + idade_FA
+         produto := idade_MB * idade_FA
       senao
          soma := idade_MA + idade_FA
-         produto := idade_MB + idade_FB
+         produto := idade_MB * idade_FB
       fimse
    senao
       se (idade_FA > idade_FB) entao
          soma := idade_MB + idade_FB
-         produto := idade_MA + idade_FA
+         produto := idade_MA * idade_FA
       senao
          soma := idade_MB + idade_FA
-         produto := idade_MA + idade_FB
+         produto := idade_MA * idade_FB
       fimse
    fimse
    
-   Escreva("Soma: ", soma, " | Produto: ", produto)
+   Escreva("Soma:", soma, " | Produto: ", produto)
    
 Fimalgoritmo

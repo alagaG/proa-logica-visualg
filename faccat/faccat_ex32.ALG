@@ -21,11 +21,11 @@ Inicio
    Escreva("Insira o número de gols marcados pelo time B: (real) ")
    Leia(time_B_gols)
 
-   se (time_A_gols < time_B_gols) entao
-      Escreva("O time vencedor é:", time_A_nome)
+   se (time_A_gols > time_B_gols) entao
+      Escreva("O time vencedor é: ", time_A_nome)
    senao
-      se (time_B_gols < time_A_gols) entao
-         Escreva("O time vencedor é:", time_B_nome)
+      se (time_B_gols > time_A_gols) entao
+         Escreva("O time vencedor é: ", time_B_nome)
       senao
          Escreva("A partida terminou em EMPATE")
       fimse

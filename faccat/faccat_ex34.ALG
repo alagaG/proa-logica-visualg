@@ -38,6 +38,6 @@ Inicio
            resposta := "C"
       fimse
    fimse
-   Escreva("Z: ", z, " | Resposta: ", resposta)
+   Escreva("Z:", z, " | Resposta: ", resposta)
 
 Fimalgoritmo

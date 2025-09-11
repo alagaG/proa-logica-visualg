@@ -21,21 +21,13 @@ Inicio
       se (numero2 > numero3) entao
          Escreva(numero2 + numero1)
       senao
-         se (numero1 > numero3) entao
-            Escreva(numero3 + numero1)
-         senao
-            Escreva(numero1 + numero3)
-         fimse
+         Escreva(numero3 + numero1)
       fimse
    senao
-      se (numero1 < numero3) entao
-         se (numero3 < numero2) entao
-            Escreva(numero3 + numero2)
-         senao
-            Escreva(numero2 + numero3)
-         fimse
+      se (numero1 > numero3) entao
+         Escreva(numero2 + numero1)
       senao
-         Escreva(numero1 + numero2)
+         Escreva(numero2 + numero3)
       fimse
    fimse
 
