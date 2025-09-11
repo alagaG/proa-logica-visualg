@@ -25,6 +25,12 @@ inicio
    opcoes_subtitulo := subtitulo
 fimprocedimento
 
+procedimento menu_descreva(parte:caracter)
+inicio
+   opcoes_descricao_len := opcoes_descricao_len + 1
+   opcoes_descricao[opcoes_descricao_len] := parte
+fimprocedimento
+
 procedimento menu_adicionar(opcao:caracter)
 inicio
    opcoes_texto_len := opcoes_texto_len + 1
@@ -47,7 +53,11 @@ inicio
    Escreval(opcoes_titulo)
    Escreval(opcoes_subtitulo)
    para opcoes_loop_i de 1 ate opcoes_descricao_len faca
-      Escreval(opcoes_loop_i, ". ", opcoes_descricao[opcoes_loop_i])
+      se (opcoes_descricao[opcoes_loop_i] = "\n") entao
+           Escreval("")
+      senao
+           Escreva(opcoes_descricao[opcoes_loop_i])
+      fimse
    fimpara
    Escreval("")
    para opcoes_loop_i de 1 ate opcoes_texto_len faca
@@ -114,27 +124,22 @@ inicio
 
    escolha(opcoes_escolhida)
    caso 1
-      menu_tela_saldo_callback("Corrente")
+      menu_tela_saldo_callback("Corrente", conta_corrente_saldo)
    caso 2
-      menu_tela_saldo_callback("Poupança")
+      menu_tela_saldo_callback("Poupança", conta_poupanca_saldo)
    caso 3
       menu_tela_principal()
    fimescolha
 
 fimprocedimento
 
-procedimento menu_tela_saldo_callback(conta:caracter)
+procedimento menu_tela_saldo_callback(conta:caracter; saldo:real)
 inicio
-var saldo: real
-   escolha (conta)
-   caso "Corrente"
-      saldo := conta_corrente_saldo
-   caso "Poupança"
-      saldo := conta_poupanca_saldo
-   fimescolha
-
    menu_limpar()
    menu_preparar("Ação - Consulta de Saldo", conta)
+   menu_descreva("R$")
+   menu_descreva(saldo)
+   menu_descreva("\n")
    menu_adicionar("Voltar")
    menu_exibir()
    menu_ler()
