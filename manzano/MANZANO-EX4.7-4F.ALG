@@ -23,13 +23,31 @@ inicio
    leia(numero3)
 
    se (numero1 > numero2) entao
-      se (numero1 > numero3) entao
-         escreva(numpcarac(numero1)+" "+numpcarac(numero2)+" "+numpcarac(numero3))
+      se (numero2 > numero3) entao
+         // n3 n2 n1
+         escreval(numpcarac(numero3)+" "+numpcarac(numero2)+" "+numpcarac(numero1))
       senao
-
+         se (numero3 > numero1) entao
+            // n2 n1 n3
+            escreval(numpcarac(numero2)+" "+numpcarac(numero1)+" "+numpcarac(numero3))
+         senao
+            // n2 n3 n1
+            escreval(numpcarac(numero2)+" "+numpcarac(numero3)+" "+numpcarac(numero1))
+         fimse
       fimse
    senao
-
+      se (numero1 > numero3) entao
+         // n3 n1 n2
+         escreval(numpcarac(numero3)+" "+numpcarac(numero1)+" "+numpcarac(numero2))
+      senao
+         se (numero3 > numero2) entao
+            // n1 n2 n3
+            escreval(numpcarac(numero1)+" "+numpcarac(numero2)+" "+numpcarac(numero3))
+         senao
+            // n1 n3 n2
+            escreval(numpcarac(numero1)+" "+numpcarac(numero3)+" "+numpcarac(numero2))
+         fimse
+      fimse
    fimse
 
 fimalgoritmo
