@@ -583,9 +583,9 @@ inicio
    se (extrato = ENUM_EXTRATO_LIMITADO_MAIOR) entao
       para loop_i de 1 ate 30 faca
          se (loop_i <= extrato_limitado_maior_quantidade) entao
-         se (loop_i > 1) entao
-            acumulador := acumulador + "\n"
-         fimse
+            se (loop_i > 1) entao
+               acumulador := acumulador + "\n"
+            fimse
             acumulador := acumulador + extrato_limitado_maior[loop_i]
          fimse
       fimpara
